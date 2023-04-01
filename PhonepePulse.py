@@ -9,9 +9,11 @@ from sqlalchemy import create_engine, text
 from urllib.parse import quote 
 
 
+#Function to Create Connection with MySQL Database
+
 def read_data_from_mysql(table_name):
     engine = create_engine(
-        'mysql+mysqlconnector://root:%s@localhost:3306/Phonepe_Pulse' % quote('SmithRD@7777'))
+        'mysql+mysqlconnector://root:%s@localhost:3306/Phonepe_Pulse' % quote('Your_Password')) #Password with Special Characters Also Works in this Connection  
     query = f"SELECT * FROM {table_name}"
     df = pd.read_sql_query(sql=text(query), con= engine.connect())
     df = df.drop('id', axis=1)
