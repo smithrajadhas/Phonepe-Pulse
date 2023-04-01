@@ -231,7 +231,7 @@ def create_and_update_table(cursor, table_name,data,columns):
         )
         cursor.execute(insert_row_query, row)
         
-cnx = mysql.connector.connect(user='root', password='SmithRD@7777',
+cnx = mysql.connector.connect(user='root', password='Your_Password',
                               host='localhost',
                               database='Phonepe_Pulse')
 
